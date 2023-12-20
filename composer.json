@@ -1,0 +1,17 @@
+{
+    "name": "bergu/meuprojeto",
+    "type": "project",
+    "autoload": {
+        "psr-4": {
+            "Bergu\\Meuprojeto\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Bergue"
+        }
+    ],
+    "require": {
+        "phpmailer/phpmailer": "^6.9"
+    }
+}
