@@ -1,133 +1,141 @@
-/* Todos os elementos da página */
+/* Reset de margem e padding para todos os elementos */
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
-/* Elementos com o ID "titulo" */
+/* Estilo do título */
 #titulo {
     font-family: sans-serif;
     color: #1f056f;
     margin-left: 4%;
 } 
 
-/* Elementos de tag <fieldset>*/
-fieldset {
-    border: 0;
-}
-
-/* Elemento de tag <body> */
-body{
+/* Estilo do body */
+body {
     background-color: #F0F8FF;
     font-family: sans-serif;
     font-size: 1em;
-    width: 100%;
+    color: rgb(109, 185, 197);
+    padding: 2% 2% 0 2%;
     min-height: 100vh;
-    color: rgb(109, 185, 197) 130, 157);
-    margin-left: 36%;
-    margin-top: 2%;
+    display: flex;
     justify-content: center;
-    
 }
 
-/* Elementos de tags <body>, <input>, <Select>, <textarea> e <button> */
+/* Estilo comum para input, select, textarea e button */
 input, select, textarea, button {
     font-family: sans-serif;
     font-size: 1em;
     color: #6e9ec9;
-    border-radius: 5px;    
+    border-radius: 5px;
+    margin-bottom: 1em;
+    width: 100%;   
 }
 
-/* Elementos de classe "grupo" nos estados das pseudoclasses "before" e "after" */
+/* Estilo do grupo */
 .grupo:before, .grupo:after {
     display: table;
+    content: "";
 }
 
-/* Elementos de classe "grupo" no estado da pseudoclasse "after" */
 .grupo:after {
     clear: both;
 }
 
-/* Elementos de classe "campo" */
+/* Estilo do campo */
 .campo {
     margin-bottom: 1em;
 }
 
-/* Elementos de classe "campo" de tag <label> */
 .campo label {
     margin-bottom: 0.2em;
     color: #6e9ec9;
     display: block;
-    
 }
 
-/*Mudança do texto(holder) da box*/
 .campo input::placeholder {
     background-color: #eeeeee75;
     font-size: 0.75em;
 }
 
-/* Elementos de classe "campo" ou "grupo" de tag <fieldset> */
+/* Estilo específico para campos dentro de um fieldset do grupo */
 fieldset.grupo .campo {
-    float:  left;
-    margin-right: 1em;
+    float: none;
+    margin-right: 0;
 }
 
-/* Elementos de classe "campo" das tags <input> com atributo text e email, da tag <select> e da tag <textarea>*/
-.campo input[type="text"], .campo input[type="email"], .campo select, .campo textarea {
+/* Estilo para input, select, textarea de campo */
+.campo input[type="text"],
+.campo input[type="email"],
+.campo select,
+.campo textarea {
     display: block;
     padding: 0.2em;
     border: 1px solid #050707;
     box-shadow: 2px 2px 2px rgba(0,0,0,0.2);
     border-radius: 5px;
     cursor: pointer;
-    
 }
+
 .campo textarea {
     display: block;
 }
 
-/* Elementos de classe "campo" de tag <select> e <option>*/
 .campo select option {
     padding-right: 1em;
 }
 
-/* Elemento de classe "campo" com tag <input>, <select> e <textarea> todas com estado da pseudoclasse "focus"*/
-.campo input:focus, .campo select:focus, .campo textarea:focus {
+/* Estilo do foco para input, select, textarea de campo */
+.campo input:focus,
+.campo select:focus,
+.campo textarea:focus {
     background: rgb(202, 222, 238);
 }
-#aviso{
+
+/* Estilo do aviso */
+#aviso {
     font-size: 0.8em;
 }
 
-/* Elemento de classe "botao" */
+/* Estilo do botão */
 .botao {
     font-size: 1.2em;
     background: #7bb6c5;
     border:  0;
-    margin-bottom: 1em;
     color: #ffffff;
     padding: 0.2em 0.6em;
     box-shadow: 2px 2px 2px rgba(0,0,0,0.2);
     text-shadow: 1px 1px 1px rgba(0,0,0,0.5);
-    position: relative;
-    top: 97%;
-    left: 20%;
-    margin-right: -50%;
-    transform: translate(-50%, -50%)
-    
+    width: 100%;
 }
 
-/* Elemento de classe "botao" com o estado da pseudoclasse "hover" */
+/* Estilo do hover para o botão */
 .botao:hover {
     background: #010581;
     box-shadow: inset 2px 2px 2px rgba(0,0,0,0.2);
     text-shadow: none;
-    
 }
 
-/* Elementos de classe botão e de tag <select> */
-.botao, select{
+/* Estilo do cursor para botão e select */
+.botao, select {
     cursor: pointer;
-    
+}
+
+/* Media queries para tornar o layout mais responsivo */
+@media only screen and (min-width: 600px) {
+    body {
+        padding: 2%;
+    }
+
+    .campo {
+        width: 48%;
+        float: left;
+        margin-right: 2%;
+    }
+
+    .campo:last-child {
+        margin-right: 0;
+    }
 }
