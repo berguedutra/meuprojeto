@@ -73,12 +73,12 @@ try {
     $phpmailer->Host = 'sandbox.smtp.mailtrap.io';
     $phpmailer->SMTPAuth = true;
     $phpmailer->Port = 2525;
-    $phpmailer->Username = '090d8de9cc7d3d';
-    $phpmailer->Password = '946b9779594783';
+    $phpmailer->Username = 'usuário';
+    $phpmailer->Password = 'senha';
 
     //Recipients
     $phpmailer->setFrom('from@example.com', 'Mailer');
-    $phpmailer->addAddress('berguedutra23@gmail.com', 'Bergue');     //Add a recipient
+    $phpmailer->addAddress('seuemail@gmail.com', 'Bergue');     //Add a recipient
     
     $phpmailer->addAttachment($target_file, 'Arquivo.pdf');    //Optional name
 
